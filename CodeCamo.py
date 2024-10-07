@@ -19,6 +19,9 @@ def generate_junk_code():
 def insert_random_junk_blocks(code_parts):
     code_with_junk = []
     for part in code_parts:
+        while random.random() > 0.40:
+            junk = generate_junk_code()
+            code_with_junk.append(junk)
         code_with_junk.append(part)
         while random.random() > 0.30:
             junk = generate_junk_code()
